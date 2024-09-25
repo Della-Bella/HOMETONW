@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <!-- nav-->
@@ -24,14 +26,15 @@
         </ol>
 </nav>
 </div>
-
-<!-- header -->
 <header>
     <div class="header">
-    <h1>WELCOME<br>TO BÚZIOS</h1>
-    <video autoplay muted loop class="background-video">
+      <h1>WELCOME<br>TO BÚZIOS</h1>
+      <video autoplay muted loop class="background-video">
         <source src="img/birds.mp4" type="video/mp4">
-</header>
+      </video>
+    </div>
+  </header>
+
 
 <!--Start main content -->
 <main>
@@ -82,24 +85,26 @@
 
 
 <!-- BANNER IMAGE -->
- <div class="banner" id="extraordinary">
+ <div class="banner" id="imageback">
     <h2 class="banner-text">EXTRAORDINARY</h2>
     <p class="banner-info">You will be surprise</p>
     <div></div>
  </div>
+
  <!-- GALLERY-->
-<div class="gallery-beaches" id="beaches">
 
-    <img class="icons-arow" src="img/arrow-left.svg">
-    <img class="photos" src="img/Azedinha.jpg">
-    <img class="icons-arow" src="img/arrow-right.svg">
-
+ <div id="beaches">
+    <img class="icons-arrow" src="img/arrow-left.svg" id="prev">
+    <img class="photos" id="pic" src="img/1_beach.jpg">
+    <img class="icons-arrow" src="img/arrow-right.svg" id="next">
 </div>
+
 
  <!-- NEWSLETTER--> 
  <div class="newsletter">
-    <p><em> Get the latest news </em></p>
-    <button class="bt-newsletter" type="button">NEWSLETTER</button> 
+    <p>Get <span class="realistic-marker-highlight">the latest </span>news</p>
+    <input type="email" placeholder="email" required="" id="contact" />
+  
 
     </div>
 
@@ -117,14 +122,14 @@
 </main>
 
 <!-- footer -->
- <div class="footer-info">
+ <div class="footer-info ">
     <img src="img/LOGO.svg" height="80px" width="80px">
     <p class="text-footer"> COME TO VISIT US</p>
     <p> ARMAÇAO DOS BUZIOS, RJ , BRAZIL</p>
 
  <div class="social">
     <ol class="social-links">
-        <a  href="https://www.facebook.com" target="_blank"> <img src="img/facebook.png" alt="Facebook social media pag">
+        <a  href="https://visitbuzios.com.br/?fbclid=IwY2xjawFcxiVleHRuA2FlbQIxMAABHZPN0-O5DW4y3Z1M_a94uvhPPuObhtTz9oDfVjX0fLKLwuLiKa4KTZ244Q_aem_BciZ-nXB1lIFth1z7ANZfA" target="_blank"> <img src="img/facebook.png" alt="Facebook social media pag">
         <a  href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram social media page">
         <a  href="https://x.com/?lang=en" target="_blank"> <img src="img/twiter.png" alt="twiter social media page">
     </ol>
@@ -135,7 +140,7 @@
 <footer>
 
 </footer>
-
+<script src="script.js"></script>
 </body>
     
 </html>
