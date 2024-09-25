@@ -1,31 +1,24 @@
 
+let photos, carousel;
+photos = ['img/1_beach.jpg', 'img/2_beach.jpg', 'img/3_beach.jpg'];
+carousel = ['img/3_beach.jpg'];
 
-<script>
-    var photos = ['img/1_beach.jpg', 'img/2_beach.jpg', 'img/3_beach.jpg'];
-    var currentIndex = 0; // Keep track of the current image index
+// Assuming you have an <img> element with id="pic"
+let element_pic = document.getElementById('pic');
 
-    // Select the image element
-    let element_pic = document.getElementById('pic');
+// Set the src attribute of the img element to display the first photo from the array
+element_pic.src = photos[0];
+document.getElementById('next').addEventListener('click', (event) => {
+    let element_pic2 = document.getElementById('pic');
+    photos.push(photos.shift());
+    element_pic2.setAttribute("src", photos.slice(-1)[0]);
+  
+  });
+  
+  document.getElementById('back').addEventListener('click', (event) => {
+    let element_pic3 = document.getElementById('pic');
+    photos.unshift(photos.pop());
+    element_pic3.setAttribute("src", photos.slice(-1)[0]);
+  
+  });
 
-    // Update the image source
-    function updateImage() {
-        element_pic.setAttribute("src", photos[currentIndex]);
-    }
-
-    // Add event listener for the "next" button
-    document.getElementById('next').addEventListener('click', (event) => {
-        // Move to the next image, loop back to the start if necessary
-        currentIndex = (currentIndex + 1) % photos.length;
-        updateImage();
-    });
-
-    // Add event listener for the "prev" button (assuming you have one)
-    document.getElementById('prev').addEventListener('click', (event) => {
-        // Move to the previous image, loop back to the end if necessary
-        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-        updateImage();
-    });
-
-    // Initially display the first image
-    updateImage();
-</scrip>
